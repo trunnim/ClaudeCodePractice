@@ -1,0 +1,67 @@
+# Spec: <FILL-IN: feature name>
+
+<!--
+  HOW TO PRODUCE THIS FILE
+
+  Do not write it from a blank page. Have Claude interview you:
+
+      I want to build <brief description>. Interview me in detail using the
+      AskUserQuestion tool. Ask about technical implementation, UI/UX, edge
+      cases, concerns, and tradeoffs. Don't ask obvious questions, dig into
+      the hard parts I might not have considered. Keep interviewing until
+      we've covered everything, then write a complete spec to SPEC.md.
+
+  Then START A FRESH SESSION to implement it. The interview fills a context
+  window with exploration; implementation deserves a clean one, and now you
+  have a written spec instead of a conversation to re-read.
+
+  A good spec is SELF-CONTAINED: someone who did not attend the interview can
+  execute it. Time spent making it precise pays back more than time spent
+  watching the implementation.
+-->
+
+## Problem
+
+<FILL-IN: what is wrong or missing today, and who feels it. Not the solution.>
+
+## Outcome
+
+<FILL-IN: what is true once this is done, stated so that it can be checked.>
+
+## Scope
+
+**In:**
+- <FILL-IN>
+
+**Out:**
+- <FILL-IN: name these explicitly. Unstated exclusions get built anyway.>
+
+## Files and interfaces
+
+| Path | Change |
+|---|---|
+| `<FILL-IN>` | <FILL-IN: new / modified, and how> |
+
+<FILL-IN: signatures of any new public function, endpoint, or schema. Getting
+these agreed before implementation is most of the value of writing a spec.>
+
+## Edge cases
+
+<!-- The section that decides whether the implementation is any good. -->
+
+| Case | Expected behaviour |
+|---|---|
+| <FILL-IN> | <FILL-IN> |
+
+## Verification
+
+<FILL-IN: the exact commands that prove this works, end to end. Not "add
+tests" -- the actual command, and what passing output looks like.>
+
+```bash
+<FILL-IN>
+```
+
+## Open questions
+
+- [ ] <FILL-IN: anything genuinely undecided. Empty is a good sign.>

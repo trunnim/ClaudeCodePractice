@@ -1,0 +1,40 @@
+---
+name: <FILL-IN>
+description: <FILL-IN: one line. This is how Claude decides the skill applies, so name the trigger, not the mechanism. "Fix a GitHub issue end to end" beats "issue helper".>
+# disable-model-invocation: true
+#   Uncomment for workflows with side effects -- writing files, pushing, posting.
+#   Claude will then never trigger it on its own; only you can, with /<name>.
+# allowed-tools: Read, Grep, Glob, Bash
+#   Optional. Narrows what the skill may do.
+---
+
+# <FILL-IN: Title>
+
+<FILL-IN: one or two sentences on what this does and when to reach for it.>
+
+<!--
+  `name` MUST equal this file's directory name -- .claude/skills/<name>/SKILL.md.
+  It is what you type as a slash command. `make docs` checks this.
+
+  A skill is the right tool when the knowledge is a multi-step procedure, or is
+  only relevant sometimes. Always-relevant facts belong in CLAUDE.md; things
+  that must happen every time belong in a hook.
+
+  $ARGUMENTS is whatever the user typed after the command.
+  $1, $2 ... are individual positional arguments.
+-->
+
+## Steps
+
+1. <FILL-IN: first action. Be concrete -- name commands and paths.>
+2. <FILL-IN>
+3. <FILL-IN>
+
+## Verify
+
+<FILL-IN: how the skill confirms it worked -- a command it runs, a file it
+checks. A skill that ends without verifying leaves you to find the failure.>
+
+## Do not
+
+- <FILL-IN: the failure mode you would otherwise have to correct every time.>

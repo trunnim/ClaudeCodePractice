@@ -1,0 +1,16 @@
+# Personal, machine-local instructions. Loads alongside CLAUDE.md but is never committed.
+# See docs/lessons/07-claude-md.md for what belongs here vs in PROFILE.md.
+CLAUDE.local.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors / OS
+.DS_Store
+*.swp
+
+# Local permission overrides, written by /permissions
+.claude/settings.local.json

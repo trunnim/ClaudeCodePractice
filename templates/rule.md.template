@@ -1,0 +1,25 @@
+---
+paths:
+  - "<FILL-IN: e.g. src/api/**/*.py>"
+  - "<FILL-IN: e.g. tests/**/*_test.py>"
+---
+
+# <FILL-IN: Topic>
+
+<!--
+  With `paths:`, this rule loads ONLY when Claude reads a matching file. That is
+  the point: instructions relevant to part of a repository should not sit in
+  every session's context.
+
+  Delete the whole frontmatter block to make the rule load every session, at the
+  same priority as .claude/CLAUDE.md.
+
+  An empty `paths:` list is an error -- it is neither scoped nor unscoped.
+  `make docs` catches it.
+
+  Keep one topic per file. Name the file after the topic: testing.md,
+  api-design.md, migrations.md.
+-->
+
+- <FILL-IN: a rule that only applies to these files>
+- <FILL-IN: another>

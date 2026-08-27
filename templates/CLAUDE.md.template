@@ -1,0 +1,101 @@
+# CLAUDE.md
+
+<!--
+HOW TO USE THIS TEMPLATE
+
+  1. Copy to your project root as CLAUDE.md.
+  2. Delete every section you cannot fill with something concrete. An empty
+     heading is worse than no heading -- it invites padding.
+  3. Test each line against: "would removing this cause Claude to make a
+     mistake?" If not, cut it.
+  4. Stay under 200 lines. Run `/doctor` if you need help trimming.
+
+  Or let a skill do the first pass: /new-claude-md <path-to-repo>
+
+  These comments are stripped before the file enters context, so this block
+  costs nothing -- but delete it anyway once you have filled the file in.
+
+  WHAT BELONGS HERE                      WHAT DOES NOT
+  Commands Claude cannot guess           Anything derivable from reading code
+  Style rules that differ from default   Standard conventions Claude knows
+  Test instructions and runners          API docs (link instead)
+  Branch and PR etiquette                Information that changes often
+  Architecture decisions, with the why   File-by-file descriptions
+  Environment quirks and required vars   Long explanations or tutorials
+  Non-obvious gotchas                    "Write clean code" and friends
+-->
+
+<FILL-IN: one or two sentences. What is this project, and what does it do?
+Enough that someone who has never seen it knows what they are touching.>
+
+## Commands
+
+```bash
+<FILL-IN: install>          # e.g. uv sync
+<FILL-IN: run tests>        # e.g. pytest
+<FILL-IN: one test>         # e.g. pytest tests/test_auth.py::test_refresh
+<FILL-IN: lint / format>    # e.g. ruff check . && ruff format .
+<FILL-IN: typecheck>        # e.g. mypy src/
+<FILL-IN: run locally>      # e.g. uvicorn app.main:app --reload
+```
+
+<!-- The single-test command matters more than it looks. Without it, Claude
+     runs the whole suite on every iteration and burns both time and context. -->
+
+**IMPORTANT: <FILL-IN: the one command that must run before every commit.>**
+
+<!-- Emphasise exactly one line. Emphasise five and none of them stand out. -->
+
+## Architecture
+
+<FILL-IN: only what cannot be learned by reading a file or two. The shape of
+the system, why it is that shape, and the decisions a newcomer would otherwise
+undo by accident.>
+
+- <FILL-IN: e.g. "Handlers are thin; all business logic lives in `services/`.
+  A handler that queries the database directly is a bug.">
+- <FILL-IN: e.g. "We use synchronous SQLAlchemy on purpose -- an async rewrite
+  was tried and reverted in #412.">
+
+## Conventions
+
+- <FILL-IN: a style rule that differs from the language default>
+- <FILL-IN: naming, file layout, import ordering, error handling>
+- <FILL-IN: how to add a new module, endpoint, or migration>
+
+## Testing
+
+- <FILL-IN: framework and where tests live>
+- <FILL-IN: what to mock and what never to mock>
+- <FILL-IN: how to run one test, and any slow suite worth avoiding by default>
+
+## Gotchas
+
+<!-- The highest-value section. Every entry should come from something that
+     actually went wrong once. -->
+
+- <FILL-IN: e.g. "`make build` must run before tests; generated stubs are gitignored.">
+- <FILL-IN: e.g. "Integration tests need a local Postgres on :5433, not :5432.">
+
+## Git
+
+- Branches: <FILL-IN>
+- Commits: <FILL-IN>
+- <FILL-IN: anything that must never be committed>
+
+<!--
+  OPTIONAL, delete if unused:
+
+  Import a profile or personal notes. Paths resolve relative to THIS file,
+  and imports go at most four hops deep:
+
+      @PROFILE.md
+      @docs/architecture.md
+
+  Bridging an existing AGENTS.md -- see templates/AGENTS-bridge.md
+
+  Moving instructions out of this file when it gets long:
+    - Only relevant to some files?  -> .claude/rules/<topic>.md with `paths:`
+    - A multi-step procedure?       -> .claude/skills/<name>/SKILL.md
+    - Must happen every time?       -> a hook in .claude/settings.json
+-->
